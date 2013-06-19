@@ -2,7 +2,9 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 function! luajikken#luacmd()
-  if executable('lua')
+  if executable('luajit')
+    return 'luajit'
+  elseif executable('lua')
     return 'lua'
   elseif s:V.is_unix()
     return 'bin/lua-unix'
