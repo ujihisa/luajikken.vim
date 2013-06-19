@@ -17,7 +17,7 @@ function! luajikken#luacmd()
     return printf('%s/bin/lua-win.exe', s:luajikken_dir)
   else
     echoerr 'lua command not found'
-    return ''
+    return 'echo'
   endif
 endfunction
 
